@@ -2,8 +2,6 @@ import express from "express";
 
 const app = express();
 const PORT = process.env.PORT || 5000;
-
-
 import cors from "cors";
 import mongoose, { connect } from "mongoose";
 import dotenv from "dotenv";
@@ -141,9 +139,7 @@ app.post("/user", async (req, res) => {
 
 app.get("/user", async (req, res) => {
   try {
-
     const users = await User.find();
-
     res.json({
       success: true,
       message: "Users fetched successfully",
@@ -289,59 +285,7 @@ app.get("/contact", async (req, res) => {
   });
 
 });
-//Train Booking post API
-import BookTrain from './models/BookTrain.js';
 
-// POST endpoint for booking train tickets
-app.post("/book-train-ticket", async (req, res) => {
-  const { from, to, date } = req.body;
-  if (!from || !to || !date) {
-    return res.json({
-      success: false,
-      message: "From, to, and date are required",
-      data: null,
-    });
-  }
-
-  const newBooking = await BookTrain.create({
-    from: from,
-    to: to,
-    date: date,
-  });
-
-  res.json({
-    success: true,
-    message: " Trains for this route",
-    data: newBooking,
-  });
-})
-
-//Airplane Booking post API
-import Bookplane from "./models/BookPlane.js";
-// POST endpoint for booking train tickets
-app.post("/book-plane-ticket", async (req, res) => {
-  const { from, to, date } = req.body;
-
-  if (!from || !to || !date) {
-    return res.json({
-      success: false,
-      message: "From, to, and date are required",
-      data: null,
-    });
-  }
-
-  const newBooking = await Bookplane.create({
-    from: from,
-    to: to,
-    date: date,
-  });
-
-  res.json({
-    success: true,
-    message: " Flights for this route",
-    data: newBooking,
-  });
-})
 // Signup API
 // Signup API
 app.post("/signup", async (req, res) => {
@@ -396,7 +340,6 @@ app.post("/signup", async (req, res) => {
 });
 
 // Admin Api
-
 import Admin from "./models/Admin.js";
 import Reservation from './models/Reservation';
 
@@ -436,12 +379,5 @@ app.get("/admin", async (req, res) => {
     });
   }
 });
-
-
-
-
-
-
-
 
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
