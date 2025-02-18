@@ -1,6 +1,6 @@
 import React from 'react'
 
-function Reservation() {
+function Information() {
   return (
     <div>
       
@@ -8,4 +8,4 @@ function Reservation() {
   )
 }
 
-export default Reservation
+export default Information
