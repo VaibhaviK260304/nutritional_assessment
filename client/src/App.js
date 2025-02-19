@@ -12,6 +12,7 @@ import Admin from "./views/Admin/Admin";
 import Chatbot from "./views/Chatbot/Chatbot"
 import Signup from "./views/Signup/Signup";
 import Info from "./views/Info/Info";
+import Checker from "./views/Checker/Checker";
 // import AdminLogin from "./views/Admin/AdminLogin"
 
 function App() {
@@ -61,6 +62,10 @@ function App() {
     {
       path: "/info",
       element: <Info/>
+    },
+    {
+      path: "/checker",
+      element: <Checker/>
     }
   ])
 
