@@ -10,6 +10,7 @@ import Payment from "./components/Payment/Payment";
 import Admin from "./views/Admin/Admin";
 import Chatbot from "./views/Chatbot/Chatbot"
 import Signup from "./views/Signup/Signup";
+import Information from "./components/Information/Information";
 // import AdminLogin from "./views/Admin/AdminLogin"
 
 function App() {
@@ -55,6 +56,10 @@ function App() {
     {
       path: "/dashboard",
       element: <Dashboard/>
+    },
+    {
+      path: "/information",
+      element: <Information/>
     }
   ])
 
