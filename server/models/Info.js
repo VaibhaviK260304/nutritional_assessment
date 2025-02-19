@@ -1,6 +1,6 @@
 import { model, Schema } from "mongoose";
 
-const reservationScheme = new Schema({
+const infoSchema = new Schema({
   name: String,
 gender: String,
 age: Number,
@@ -9,6 +9,6 @@ weight: Number,
   // seat: String
 })
 
-const Reservation = model("reservation", reservationScheme);
-export default Reservation;
+const Info = model("info", infoSchema);
+export default Info;
 
