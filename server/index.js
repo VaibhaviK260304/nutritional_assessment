@@ -341,7 +341,6 @@ app.post("/signup", async (req, res) => {
 
 // Admin Api
 import Admin from "./models/Admin.js";
-import Reservation from './models/Reservation';
 
 app.post("/admin", async (req, res) => {
   const { email, password } = req.body;
