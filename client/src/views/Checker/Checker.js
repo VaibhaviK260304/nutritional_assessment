@@ -4,7 +4,6 @@ import "./Checker.css"
 import Input from "../../components/Cinput/Input";
 
 function Checker() {
-  const ImageUploader = () => {
     const [image, setImage] = useState(null);
     const [preview, setPreview] = useState(null);
   
@@ -12,8 +11,6 @@ function Checker() {
       const file = e.target.files[0];
       if (file) {
         setImage(file);
-  
-        // Create preview URL
         const reader = new FileReader();
         reader.onloadend = () => {
           setPreview(reader.result);
@@ -93,6 +90,6 @@ function Checker() {
       
     );
   };
-}
+
 
 export default Checker
