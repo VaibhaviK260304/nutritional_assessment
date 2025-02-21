@@ -6,6 +6,7 @@ age :Number,
 gender : String,
 height:Number,
 weight:Number,
+BMI: Number,
 });
 
 const Patient= model('Patient',PatientSchema);
