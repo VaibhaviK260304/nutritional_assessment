@@ -48,11 +48,11 @@ function Info() {
       </div>
 {/* --------------------------------------------------------------------------------------------------- */}
       <div className='maindiv2'>
-        <div className='div1'>
+        <div className='div4'>
         
         </div>
 
-        <div className='div4'>
+        <div className='div5'>
         <div className="info-section right">
           <h2 className="text-xl font-semibold text-gray-700 mb-2 transition-transform hover:translate-x-2">What Information Do We Collect?</h2>
           <ul className="list-disc list-inside text-gray-600 mb-4 transition-transform hover:translate-x-2">
@@ -71,7 +71,7 @@ function Info() {
         </div> */}
         </div>
 
-        <div className='div3'>
+        <div className='div6'>
         <div className="info-section left">
           
         </div></div>
