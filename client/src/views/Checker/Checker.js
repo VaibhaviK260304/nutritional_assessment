@@ -45,15 +45,29 @@ function Checker() {
     const [Gender,SetGender] = useState("");
     const [Height,SetHeight] = useState("");
     const [Weight,SetWeight] = useState("");
-    const submit = async ({ Name, age, Gender, Height, Weight }) => {
-      toast.loading("processing")
+    /*const submit = async ({ Name, age, Gender, Height, Weight }) => {
+      const heightNum = Number(Height);
+      const weightNum = Number(Weight);
+      const BMI = weightNum/(heightNum*heightNum);
+      if(BMI<=18.5){
+        console.log(`underweight as your BMI is ${BMI} `);
+      }
+      else  if(BMI>18.5 && BMI<24.9){
+        console.log(`You are healthy as your BMI is ${BMI} `);
+      }
+      else  if(BMI>=25.0 && BMI<=29.9 ){
+        console.log(`overweight as your BMI is ${BMI} `);
+      }
+      else if(BMI>=30.0){
+        console.log(`obese as your bmi is ${BMI}`);}
       try {
         const response = await axios.post(`${process.env.REACT_APP_API_URL}/patient`, {
           Name,
           age,
           Gender,
           Height,
-          Weight
+          Weight,
+          BMI
         });
     
         console.log("Response:", response.data);
@@ -67,7 +81,24 @@ function Checker() {
       } catch (error) {
         console.error("Error submitting data:", error);
       }
-    };
+    };*/
+    const [bmimsg,Setbmimsg]=useState("")
+    const submit = async ({ Name, age, Gender, Height, Weight }) => {
+      const heightNum = Number(Height);
+      const weightNum = Number(Weight);
+      const BMI = weightNum/(heightNum*heightNum);
+      if(BMI<=18.5){
+       Setbmimsg(`underweight as your BMI is ${BMI} `);
+      }
+      else  if(BMI>18.5 && BMI<24.9){
+        Setbmimsg(`You are healthy as your BMI is ${BMI} `);
+      }
+      else  if(BMI>=25.0 && BMI<=29.9 ){
+        Setbmimsg(`overweight as your BMI is ${BMI} `);
+      }
+      else if(BMI>=30.0){
+        Setbmimsg(`obese as your bmi is ${BMI}`);}
+      }
 
 
   return (
@@ -92,6 +123,8 @@ function Checker() {
             </span>
           </div>
           <button onClick={() => submit({ Name, age, Height, Weight, Gender })}> Submit</button>
+          <br/>
+          <span>{bmimsg}</span>
         </div>
       <div className="img-upload-container">
         <h3 className="upload-head">Upload Image</h3>
