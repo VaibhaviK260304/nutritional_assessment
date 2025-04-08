@@ -1,10 +1,13 @@
 import React from 'react'
 import { useState } from "react";
 import "./Checker.css"
+import Navbar from './../../components/Navbar/Navbar';
+import axios from 'axios';
 import Input from "../../components/Cinput/Input";
 
+import Toaster,{toast} from 'react-hot-toast';
+
 function Checker() {
-  const ImageUploader = () => {
     const [image, setImage] = useState(null);
     const [preview, setPreview] = useState(null);
   
@@ -12,8 +15,6 @@ function Checker() {
       const file = e.target.files[0];
       if (file) {
         setImage(file);
-  
-        // Create preview URL
         const reader = new FileReader();
         reader.onloadend = () => {
           setPreview(reader.result);
@@ -44,9 +45,67 @@ function Checker() {
     const [Gender,SetGender] = useState("");
     const [Height,SetHeight] = useState("");
     const [Weight,SetWeight] = useState("");
+    /*const submit = async ({ Name, age, Gender, Height, Weight }) => {
+      const heightNum = Number(Height);
+      const weightNum = Number(Weight);
+      const BMI = weightNum/(heightNum*heightNum);
+      if(BMI<=18.5){
+        console.log(`underweight as your BMI is ${BMI} `);
+      }
+      else  if(BMI>18.5 && BMI<24.9){
+        console.log(`You are healthy as your BMI is ${BMI} `);
+      }
+      else  if(BMI>=25.0 && BMI<=29.9 ){
+        console.log(`overweight as your BMI is ${BMI} `);
+      }
+      else if(BMI>=30.0){
+        console.log(`obese as your bmi is ${BMI}`);}
+      try {
+        const response = await axios.post(`${process.env.REACT_APP_API_URL}/patient`, {
+          Name,
+          age,
+          Gender,
+          Height,
+          Weight,
+          BMI
+        });
+    
+        console.log("Response:", response.data);
+        SetGender("");
+        SetHeight("");
+        SetWeight("");
+        SetName("");
+        Setage("");
+        toast.success("details saved");
+        
+      } catch (error) {
+        console.error("Error submitting data:", error);
+      }
+    };*/
+    const [bmimsg,Setbmimsg]=useState("")
+    const submit = async ({ Name, age, Gender, Height, Weight }) => {
+      const heightNum = Number(Height);
+      const weightNum = Number(Weight);
+      const BMI = weightNum/(heightNum*heightNum);
+      if(BMI<=18.5){
+       Setbmimsg(`underweight as your BMI is ${BMI} `);
+      }
+      else  if(BMI>18.5 && BMI<24.9){
+        Setbmimsg(`You are healthy as your BMI is ${BMI} `);
+      }
+      else  if(BMI>=25.0 && BMI<=29.9 ){
+        Setbmimsg(`overweight as your BMI is ${BMI} `);
+      }
+      else if(BMI>=30.0){
+        Setbmimsg(`obese as your bmi is ${BMI}`);}
+      }
+
 
   return (
+    <div className='checker page'>
+      <Navbar/>
       <div className="checker-view">
+        
         <div className="details-form">
           <h3 className="upload-head">Basic Details</h3>
           <form>
@@ -63,7 +122,9 @@ function Checker() {
              For any deficiencies predicted, it is recommended to consult a healthcare professional for proper diagnosis and guidance.
             </span>
           </div>
-          <button className="submitbtn">Submit</button>
+          <button onClick={() => submit({ Name, age, Height, Weight, Gender })}> Submit</button>
+          <br/>
+          <span>{bmimsg}</span>
         </div>
       <div className="img-upload-container">
         <h3 className="upload-head">Upload Image</h3>
@@ -89,10 +150,13 @@ function Checker() {
   
         <button className="btn-upload" onClick={handleUpload}>Upload</button>
       </div>
+      
+      </div>
+      <Toaster/>
       </div>
       
     );
   };
-}
+
 
 export default Checker

@@ -8,6 +8,7 @@ body{
     flex-direction: row;
     padding: 0px;
     margin: 0px;
+    margin-top: 30px;
 }
 .submitbtn{
     background-color: #007bff;
