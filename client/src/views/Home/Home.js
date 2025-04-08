@@ -9,9 +9,7 @@ function Home() {
 
   return (
     <div>
-<<<<<<< HEAD
       <h>THis is the home page </h>
-=======
       <Navbar />
       <Slider onVitaminSelect={setSelectedVitamin} />
       {selectedVitamin && (
@@ -22,7 +20,6 @@ function Home() {
       )}
       <TopSearched />
       <Footer />
->>>>>>> 85ac086a634924d7870a511d562c11fd7be40be4
     </div>
   );
 }

@@ -13,7 +13,7 @@ function Info() {
       <div className='maindiv'>
         <div className='div1'>
         <div className="info-section left">
-          <h1 className="text-3xl font-bold text-gray-800 mb-4 transition-transform hover:translate-x-2">How We Use Your Information</h1>
+          <h1 className="text-3xl font-bold text-gray-800 mb-2 transition-transform hover:translate-x-2">How We Use Your Information</h1>
           <p className="text-gray-600 mb-4 transition-transform hover:translate-x-2">
             Our website, <span className="text-red-500 font-semibold">Nutrition in Children</span>, helps parents assess their child's nutritional status. By analyzing the data you provide, we identify potential nutrient deficiencies and offer personalized recommendations.
           </p>
