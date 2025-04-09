@@ -55,11 +55,13 @@ ul {
 .maindiv {
     /* background-color: #fdfce0; */
     margin-left: 0px;
+    display: flex;
 }
 
 .maindiv2 {
     /* background-color: #39392b; */
     color: white;
+    display: flex;
 }
 
 .div1, .div2, .div3, .div4,.div5, .div6 {
