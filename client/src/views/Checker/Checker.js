@@ -4,6 +4,7 @@ import "./Checker.css"
 import Navbar from './../../components/Navbar/Navbar';
 import axios from 'axios';
 import Input from "../../components/Cinput/Input";
+import Footer from "../../components/Footer/Footer";
 
 import Toaster,{toast} from 'react-hot-toast';
 
@@ -110,7 +111,7 @@ function Checker() {
           <h3 className="upload-head">Basic Details</h3>
           <form>
               <Input label={"Name:"} placeholder={"Enter your name"} onChange={(e)=>SetName(e.target.value)} value={Name}></Input>
-              <Input label={" Age: "} placeholder={"Enter your age"} onChange={(e)=>Setage(e.target.value)} value={age}></Input>
+              <Input label={" Age:  "} placeholder={"Enter your age"} onChange={(e)=>Setage(e.target.value)} value={age}></Input>
               <Input label={"Gender:"} placeholder={"Enter your gender"} onChange={(e)=>SetGender(e.target.value)} value={Gender}></Input>
               <Input label={"Weight:"} placeholder={"Enter your weight"} onChange={(e)=>SetWeight(e.target.value)} value={Weight}></Input>
               <Input label={"Height:"} placeholder={"Enter your height"} onChange={(e)=>SetHeight(e.target.value)} value={Height}></Input>
@@ -153,6 +154,7 @@ function Checker() {
       
       </div>
       <Toaster/>
+      <Footer/>
       </div>
       
     );
