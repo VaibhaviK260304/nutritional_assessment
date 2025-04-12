@@ -63,7 +63,11 @@ ul {
     color: white;
     /* display: flex; */
 }
-
+.img1{
+    height: 450px;
+    width: auto;
+    align-items: center;
+}
 .div1, .div2, .div3, .div4,.div5, .div6 {
     background-color: #9ee9f2;
     border-radius: 20px;

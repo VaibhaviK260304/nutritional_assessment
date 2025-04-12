@@ -2,6 +2,7 @@ import React from 'react';
 import "./Info.css";
 import Navbar from 'components/Navbar/Navbar';
 
+
 function Info() {
   return (
     <>
@@ -19,7 +20,7 @@ function Info() {
           </p>
         </div></div>
 
-        <div className='div2'>
+            <img src='https://www.anexasclinic.com/wp-content/uploads/2018/12/Nutritional-Assessment_Healthier-Eating.jpg'  className='img1'/>
         {/* <div className="info-section right">
           <h2 className="text-xl font-semibold text-gray-700 mb-2 transition-transform hover:translate-x-2">What Information Do We Collect?</h2>
           <ul className="list-disc list-inside text-gray-600 mb-4 transition-transform hover:translate-x-2">
@@ -30,7 +31,7 @@ function Info() {
             <li><strong>Image:</strong> Analyzed for potential visual indicators of deficiencies.</li>
           </ul>
         </div> */}
-        </div>
+        
 
         <div className='div3'>
         <div className="info-section left">
@@ -48,9 +49,8 @@ function Info() {
       </div>
 {/* --------------------------------------------------------------------------------------------------- */}
       <div className='maindiv2'>
-        <div className='div4'>
         
-        </div>
+            <img src='https://www.anexasclinic.com/wp-content/uploads/2018/12/Nutritional-Assessment_Healthier-Eating.jpg'  className='img1'/>      
 
         <div className='div5'>
         <div className="info-section right">
@@ -71,11 +71,7 @@ function Info() {
         </div> */}
         </div>
 
-        <div className='div6'>
-        <div className="info-section left">
-          
-        </div></div>
-
+            <img src='https://www.anexasclinic.com/wp-content/uploads/2018/12/Nutritional-Assessment_Healthier-Eating.jpg'  className='img1'/>
       </div>
 {/* -------------------------------------------------------------------- */}
   </div>
