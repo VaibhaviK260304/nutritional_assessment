@@ -55,19 +55,19 @@ ul {
 .maindiv {
     /* background-color: #fdfce0; */
     margin-left: 0px;
-    display: flex;
+    /* display: flex; */
 }
 
 .maindiv2 {
     /* background-color: #39392b; */
     color: white;
-    display: flex;
+    /* display: flex; */
 }
 
 .div1, .div2, .div3, .div4,.div5, .div6 {
     background-color: #9ee9f2;
     border-radius: 20px;
-    width: 100%;
+    width: auto;
     margin: 10px;
     padding: 20px;
     height: 350px;
