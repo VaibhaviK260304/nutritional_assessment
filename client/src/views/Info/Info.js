@@ -1,7 +1,9 @@
 import React from 'react';
 import "./Info.css";
 import Navbar from 'components/Navbar/Navbar';
-
+import img2 from './Nutritional-Assessment_Healthier-Eating.jpg'
+import img3 from './img3.jpg'
+import img4 from './img4.jpg'
 
 function Info() {
   return (
@@ -20,7 +22,7 @@ function Info() {
           </p>
         </div></div>
 
-            <img src='https://www.iyap.global/_next/image?url=https%3A%2F%2Fiyap-api.randiltharusha.me%2Fuploads%2Fnutrition_pyramid_23_2148488917_43bdf2061f.webp&w=1920&q=75'  className='img1'/>
+            <img src={img3}  className='img3'/>
         {/* <div className="info-section right">
           <h2 className="text-xl font-semibold text-gray-700 mb-2 transition-transform hover:translate-x-2">What Information Do We Collect?</h2>
           <ul className="list-disc list-inside text-gray-600 mb-4 transition-transform hover:translate-x-2">
@@ -50,7 +52,7 @@ function Info() {
 {/* --------------------------------------------------------------------------------------------------- */}
       <div className='maindiv2'>
         
-            <img src='https://www.anexasclinic.com/wp-content/uploads/2018/12/Nutritional-Assessment_Healthier-Eating.jpg'  className='img1'/>      
+            <img src={img2}  className='img2'/>      
 
         <div className='div5'>
         <div className="info-section right">
@@ -71,7 +73,7 @@ function Info() {
         </div> */}
         </div>
 
-            <img src='https://drsupriyawakchaure.com/images/child-nutrition-&-diet-assessment.jpg'  className='img1'/>
+            <img src={img4}  className='img4'/>
       </div>
 {/* -------------------------------------------------------------------- */}
   </div>

@@ -63,10 +63,20 @@ ul {
     color: white;
     /* display: flex; */
 }
-.img1{
-    height: 450px;
+.img3{
+    height: 400px;
     width: auto;
-    align-items: center;
+    margin-left: 80px;
+    margin-top: 35px;
+    margin-bottom: 35px;
+}
+.img2{
+    height: 450px;
+    /* border-radius: 150px; */
+    margin-left: 55px;
+}
+.img4{
+    height: 378px;
 }
 .div1, .div2, .div3, .div4,.div5, .div6 {
     background-color: #9ee9f2;
