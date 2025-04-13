@@ -55,22 +55,37 @@ ul {
 .maindiv {
     /* background-color: #fdfce0; */
     margin-left: 0px;
-    display: flex;
+    /* display: flex; */
 }
 
 .maindiv2 {
     /* background-color: #39392b; */
     color: white;
-    display: flex;
+    /* display: flex; */
 }
-
+.img3{
+    height: 400px;
+    width: auto;
+    margin-left: 80px;
+    margin-top: 35px;
+    margin-bottom: 35px;
+}
+.img2{
+    height: 450px;
+    /* border-radius: 150px; */
+    margin-left: 55px;
+}
+.img4{
+    height: 378px;
+}
 .div1, .div2, .div3, .div4,.div5, .div6 {
     background-color: #9ee9f2;
     border-radius: 20px;
-    width: 100%;
-    margin: 10px;
+    width: auto;
+    margin: 30px;
     padding: 20px;
     height: 350px;
+    font-weight: 600;
 }
 .body{
     margin-right: 70px;
